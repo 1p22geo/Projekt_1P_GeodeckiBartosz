@@ -10,11 +10,13 @@
 	</head>
 	<body>
 		<header>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="school.html">School stuff</a></li>
-			</ul>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="school.html">School stuff</a></li>
+				</ul>
+			</nav>
 		</header>
 		<article>
 			<div>
@@ -78,10 +80,17 @@
 				<form action="#form" method="post" id="form">
 					<div class="form-content">
 						<label for="name">Your name: </label>
-						<input name="name" id="name">
+						<input name="name" id="name" placeholder="John">
 						<label for="comment">Any comment?</label>
-						<textarea name="comment" id="comment"></textarea>
-
+						<textarea name="comment" id="comment" rows="3" placeholder="Great webpage! I love the colors."></textarea>
+						<div class="checkbox-container">
+							<label>How do you rate my app?</label>
+							<label for="1star">1</label><input type="radio" name="stars" id="1star" value="1">
+							<label for="2star">2</label><input type="radio" name="stars" id="2star" value="2">
+							<label for="3star">3</label><input type="radio" name="stars" id="3star" value="3">
+							<label for="4star">4</label><input type="radio" name="stars" id="4star" value="4">
+							<label for="5star">5</label><input type="radio" name="stars" id="5star" value="5">
+						</div>
 						<input type="submit" value="Submit!">
 					</div>
 				</form>

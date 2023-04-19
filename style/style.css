@@ -8,7 +8,42 @@ header {
 	position: fixed;
 	width: 100vw;
 }
-ul {
+.form-content{
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: auto;
+    gap:1rem;
+}
+.form-content>*{
+    padding:0.5rem;
+    font-size: 1em;
+}
+.checkbox-container{
+    justify-content: center;
+    grid-column: 1/-1;
+    display: flex;
+    gap: 1px;
+    align-items: center;
+}
+.checkbox-container :nth-child(1){
+    margin-right: 2rem;
+}
+input[type=radio]{
+    align-self: center;
+    margin-right: 1rem;
+
+}
+input[type=submit]{/* I ARE HAVE INTELIGENCC */
+    grid-column: 1/-1;
+    width: 50%;
+    place-self: center center;
+}
+section ul{
+    width: 75%;
+    margin: auto;
+}
+nav ul {
 	list-style: none;
 	display: flex;
 	padding: 1em;
@@ -26,13 +61,15 @@ a:hover {
 	box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 25%);
 }
 article {
-	height: 60vh;
+	height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 8vh 48vh;
+    grid-template-rows: 8vh auto;
     place-content: center;
     text-align: center;
+    min-height: 60vh;
 }
+
 article h3{
     grid-column: 1/-1;
 }
@@ -46,22 +83,27 @@ article h2{
 }
 article:nth-child(2n+1){
 
-    background-color: #d9d9d9;
+    background-color: #e7e7e7;
     color: #000;
 }
+article:nth-child(2n) .link{
+    color: rgb(255, 255, 255);
+}
 article:nth-child(2n){
-    background-color: #585858;
+    background-color: #333333;
     color: #fff;
 }
 .link{
+    text-decoration: underline;
+
     padding: 0;
     margin: 0;
     display: inline;
     background: transparent;
-    color: rgb(156, 156, 233);
     box-shadow: none !important;
 }
 section{
+    height: auto;
     display: grid;
     padding: 1em;
     font-size: 1.5em;
@@ -72,11 +114,36 @@ section{
 section img{
     justify-self: center;
     height: 100%;
+    max-height: 60vh;
+}
+#formula{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: auto;
+}
+#integral{
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+#integral :nth-child(1), #integral :nth-child(3){
+    font-size: 0.5em;
+}
+#integral :nth-child(2){
+    font-size: 2em;
+}
+#formula em{
+    display: block;
+    height: auto;
+    text-align: center;
+    align-self: center;
 }
 section.full{
     grid-column: 1/-1;
 }
 footer{
+    border-top: 1rem solid #e7e7e7;
+    clear: both;
     height:30vh;
     display: grid;
     text-align: center;
@@ -96,8 +163,11 @@ h3{
     border-radius: 1em;
 }
 .wide{
-    height: 120vh;
-    grid-template-rows: 8vh 108vh;
+    min-height: 120vh;
+}
+pre{
+    font-family: monospace;
+    margin: 2px;
 }
 .item{
     background-color: #dbdbdb;
